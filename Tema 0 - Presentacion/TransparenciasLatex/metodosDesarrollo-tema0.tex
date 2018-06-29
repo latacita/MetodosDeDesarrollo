@@ -1,0 +1,337 @@
+\documentclass[a4paper,slidestop,xcolor=pst,dvips,blue]{beamer}
+
+\newcommand{\imp}[1]{{\small{\sf #1}}}
+
+\usepackage{beamerthemesplit}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{pstricks} % PSTricks package
+\usepackage{setspace}
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage{pgfpages}
+
+\makeatletter
+\patchcmd{\beamer@sectionintoc}{\vskip1.5em}{\vskip0.5em}{}{}
+\makeatother
+
+
+\setbeamercovered{dynamic}
+\setcounter{tocdepth}{2}
+\setbeamercolor{frametitle}{fg=black,bg=white}
+\setbeamercolor{section in toc shaded}{fg=black}
+\setbeamercolor{section in toc}{fg=red}
+\setbeamercolor{subsection in toc shaded}{fg=black}
+\setbeamercolor{subsection in toc}{fg=red}
+\setbeamerfont{section in toc}{size=\small}
+\setbeamerfont{subsection in toc}{size=\small}
+\setbeamertemplate{section in toc shaded}[default][99]
+\setbeamertemplate{subsection in toc shaded}[default][99]
+
+\setbeamertemplate{frametitle}{
+	\begin{centering}
+		\insertframetitle
+		\par
+	\end{centering}
+}
+
+\AtBeginSection[]
+{\begin{frame}[c]
+  \frametitle{Índice}
+	\tableofcontents[currentsection,
+        sectionstyle=show/shaded,
+        subsectionstyle=hide]
+\end{frame}}
+
+\AtBeginSubsection[]
+{\begin{frame}[c]
+	\frametitle{Índice}
+	\tableofcontents[
+  		currentsection,
+  		sectionstyle=shaded/shaded,
+  		currentsubsection,
+  		subsectionstyle=show/shaded/hide
+		]
+\end{frame}}
+
+\usetheme[secheader]{Boadilla}
+
+\title[Métodos de Desarrollo]{Métodos de Desarrollo}
+
+\author[Pablo Sánchez]{\alert{Pablo Sánchez}}
+
+\institute[I2E]{
+		   Dpto. Ingeniería Informática y Electrónica \\
+		   Universidad de Cantabria \\
+		   Santander (Cantabria, España) \\
+		   p.sanchez@unican.es
+}
+
+\date{}
+
+\begin{document}
+
+\begin{frame}[c]
+	\titlepage
+	\begin{columns}
+		\column{\linewidth}
+			\centering
+			\includegraphics[width=.15\textwidth,keepaspectratio=true]{images/uc.eps}
+	\end{columns}
+\end{frame}
+
+\section{Profesorado}
+
+\begin{frame}[c]
+	\frametitle{Profesorado}
+	\begin{center}
+		\alert{Pablo S\'{a}nchez Barreiro}  \\
+		\begin{small}
+		Despacho 1069 \\
+		Departamento de Ingeniería Informática y Electrónica \\
+		p.sanchez@unican.es \\
+		\end{small}
+        \ \\
+		\alert{Julio L. Medina Pasaje}  \\
+		\begin{small}
+		Despacho 1080 \\
+		Departamento de Ingeniería Informática y Electrónica \\
+		julio.medina@unican.es \\
+		\end{small}
+        \ \\
+		\alert{Miguel Sierra Sánchez}  \\
+		\begin{small}
+		Despacho 1068 \\
+		Departamento de Ingeniería Informática y Electrónica \\
+		miguel.sierra@unican.es \\
+		\end{small}
+	\end{center}
+\end{frame}
+
+\section{Objetivos y Temario}
+
+\subsection{Objetivos}
+
+\begin{frame}[c]
+	\frametitle{Objetivos de la Asignatura}
+    \begin{enumerate}[<+->]
+        \item Ser capaz de gestionar configuraciones de productos software.
+        \item Conocer el concepto de integración continua.
+        \item Conocer la diferencia entre metodologías planificadas y ágiles.
+        \item Conocer los fundamentos de las metodologías ágiles.
+        \item Saber aplicar una metodología desarrollo ágil.
+        \item Saber modelar, analizar y evaluar procesos de desarrollo software.
+        \item Conocer una metodología de desarrollo software estandarizada.
+        \item Conocer cómo se llevan a cabo los procesos de mantenimiento sw.
+        \item Conocer metodologías de desarrollo en la frontera de la investigación.
+	 \end{enumerate}
+\end{frame}
+
+\subsection{Resultados de Aprendizaje}
+
+\begin{frame}[c]
+	\frametitle{Resultados de Aprendizaje}
+    	\begin{enumerate}[<+->]
+            \item El alumno sabrá gestionar configuraciones de productos software utilizando \alert{Git}.
+            \item El alumno sabrá desarrollar aplicaciones utilizando \alert{SCRUM}.
+            \item El alumno sabrá modelar procesos de desarrollo sw en \alert{SPEM} utilizando \alert{EPF Composer}.
+            \item El alumno conocerá las áreas principales y fundamentos de \alert{Metrica v3}.
+%            \item El alumno conocerá los fundamentos del desarrollo software dirigido por modelos, las líneas de productos software y el desarrollo software basado en componentes.
+%           \item El alumno sabrá aplicar, utilizando Eclipse, un catálogo de \alert{refactorizaciones} comunes.
+%           \item El alumno sabrá gestionar la construcción de productos software utilizando \alert{Maven}.
+%            \item El alumno sabrá gestionar procesos de integración continua utilizando \alert{Jenkins}.
+		\end{enumerate}
+\end{frame}
+
+\subsection{Temario}
+
+\begin{frame}[c]
+	\frametitle{Temario}
+	\begin{enumerate}[<+->]
+		\item Gestión de la Configuración.
+		\item Metodologías Ágiles.
+		\item Modelado de Procesos Sw.
+		\item Procesos de Desarrollo Estandarizados.
+        \item Metodologías de Desarrollo Innovadoras.
+%		\item Mantenimiento y Modernización.
+	\end{enumerate}
+\end{frame}
+
+\section{Metodología}
+
+\subsection{Plataforma}
+
+\begin{frame}[c]
+	\frametitle{Plataforma de Trabajo}
+	\begin{itemize}
+		\item<1-> La plataforma de trabajo de la asignatura es \emph{moodle}.
+		\item<2-> Todas las notificaciones y publicaciones se harán a través de \emph{moodle}.
+		\item<3-> \alert{Es obligación del alumno estar atento a las posibles notificaciones y avisos que se realicen a través de \emph{moodle}}.
+	\end{itemize}
+\end{frame}
+
+\subsection{Horarios}
+
+\begin{frame}[c]
+	\frametitle{Horario Clases Regular}
+	\begin{small}
+	\begin{center}
+	\begin{tabular}{||l|c|c|c|c|c||}
+	\hline \hline
+				   & Lunes         & Martes  & Miércoles & Jueves  & Viernes \\ \hline \hline
+    08:30 - 09:30  &               &         &  Métodos  & Métodos &         \\ \hline
+    09:30 - 10:30  &               &         &           &         &         \\ \hline
+    10:45 - 11:45  & Métodos (Lab) &         &           &         &         \\ \hline
+	11:45 - 12:45  & Métodos (Lab) &         &           &         &         \\ \hline
+	12:45 - 13:45  &               &         &           &         &         \\ \hline \hline
+	\end{tabular}
+	\end{center}
+	\end{small}
+%	\begin{itemize}
+%		\item<2-> La asistencia a las clases teóricas y prácticas no es obligatoria (salvo excepciones ocasionales), \uncover<3->{\alert{pero muy necesaria}.}
+%        \item<4-> En cualquier caso, la no asistencia a clases prácticas deberá estar aceptada por el resto del grupo de prácticas.
+%	\end{itemize}
+\end{frame}
+
+
+\subsection{Actividades}
+
+\begin{frame}
+	\frametitle{Clases en Aula}
+	\begin{block}{Objetivo}
+        Entender los conocimientos teóricos que constituyen la base de las habilidades y destrezas a adquirir al final de la asignatura.
+	\end{block}
+	\begin{itemize}[<+->]
+		\item Clases magistrales utilizando pizarra y/o transparencias.
+		\item \alert{Las transparencias} son material de apoyo a la docencia, \alert{no son apuntes}.
+        \item Visualización de vídeos con exposiciones teóricas.
+        \item Visualización de vídeotutoriales para la utilización de herramientas.
+        \item Por cada tema existirá un itinerario que indicará cómo preparar el tema de forma autónoma.
+%        \item \textbf{Opcional:} Preparación autónoma y exposición del contenido teórico.
+%        \item Actividades de aprendizaje activo en función del contenido y
+% predisposición del alumnado.
+		\item \alert{Sin conocimiento teórico es imposible alcanzar las habilidades prácticas}.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[c]
+	\frametitle{Clases en Laboratorio}
+	\begin{block}{Objetivo}
+        Aplicar los conceptos teóricos aprendidos en las clases de aula al casos de estudio reales de mediana escala, con el objetivo de desarrollar las competencias deseadas.
+	\end{block}
+	\begin{itemize}[<+->]
+        \item Modelado de una metodología sw en \emph{SPEM}.
+        \item Realización de pequeñas prácticas guiadas y no calificables.
+        \item Desarrollo \alert{en grupo} de un proyecto sw utilizando \emph{SCRUM}.
+        \item Dicho proyecto se integrará con las asignaturas de \emph{Calidad y Auditoría} y \emph{Procesos de Ingeniería del Software}.
+	\end{itemize}
+\end{frame}
+
+\subsection{Proyecto Integrado}
+
+\begin{frame}[c]
+	\frametitle{Proyecto Sw Integrado}
+	\begin{itemize}[<+->]
+        \item Durante las semanas 5 a 10 se trabajará exclusivamente en el desarrollo de un proyecto sw utilizando \emph{Scrum} como metodología.
+        \item No hay clases teóricas, sólo clases de laboratorio.
+        \item Los alumnos deberán desarrollar en grupos de 4-6 alumnos una aplicación \emph{Android} para la visualización de una fuente externa de datos.
+        \item Además, la asignatura de \emph{Calidad y Auditoría} integra sus 4 horas con la asignatura de \emph{Métodos de Desarrollo} y \emph{Procesos de Ingeniería del Sw} integra dos horas.
+        \item Se utilizarán durante el desarrollo del proyecto conceptos y técnicas de las tres asignaturas.
+        \item Se utilizarán diferentes partes del proyecto para evaluar cada asignatura por separado.
+        \item La integración permite desarrollar proyectos de mayor envergadura y trabajar como si se hiciese en una empresa real.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[c]
+	\frametitle{Horario Clases Proyecto Integrado}
+	\begin{small}
+	\begin{center}
+	\begin{tabular}{||l|c|c|c|c|c||}
+	\hline \hline
+				   & Lunes     & Martes   & Miércoles & Jueves   & Viernes \\ \hline \hline
+    08:30 - 09:30  & Proyecto  & Proyecto & Proyecto  & Proyecto &         \\ \hline
+    09:30 - 10:30  & Proyecto  & Proyecto & Proyecto  & Proyecto &         \\ \hline
+    10:45 - 11:45  & Proyecto  &          &           &          &         \\ \hline
+	11:45 - 12:45  & Proyecto  &          &           &          &         \\ \hline
+	12:45 - 13:45  &           &          &           &          &         \\ \hline \hline
+	\end{tabular}
+	\end{center}
+	\end{small}
+\end{frame}
+
+\section{Métodos de Evaluación/Calificación}
+
+\begin{frame}[c]
+	\frametitle{Cálculo de la Calificación Final}
+	\begin{block}{Fórmula de Cálculo de la Calificación Final}
+%        Calificacion Final = Scrum $\times$ 0.70 + SPEM  $\times$ 0.15 + Git $\times$ 0.15
+
+		\begin{tabular}{lll}
+			Calificacion Final = & Scrum & $\times \ 0.70 \ + $ \\
+                                 & SPEM  & $\times \ 0.15 \  + $ \\
+                                 & Git   & $\times \ 0.15 \   $ \\
+		\end{tabular}
+	\end{block}
+	\begin{itemize}
+		\item<2-> Hay que obtener una calificación mínima de 5.00 en la parte de Scrum para poder superar la asignatura.
+		\item<3-> Hay que obtener una calificación mínima de 3.00 de media en las otras partes para poder superar la asignatura.
+        \item<4-> Cada parte a su vez se dividirá en diversos elementos evaluables.
+	\end{itemize}
+\end{frame}
+
+\section{Bibliografía}
+
+\begin{frame}
+    \frametitle{Bibliografía Principal}
+    \begin{thebibliography}{1}
+
+\bibitem{Chacon2014}
+Scott Chacon and Ben Straub.
+\newblock {\em {Pro Git}}.
+\newblock Apress, 2 edition, 2014.
+
+\bibitem{Schwaber2011}
+K~Schwaber and Jeff Sutherland.
+\newblock {The Scrum Guide}.
+\newblock {\em Scrum. org, October}, 2(October):17, 2011.
+
+\bibitem{Cohn2004}
+Mike Cohn.
+\newblock {\em {User Stories Applied: For Agile Software Development}},
+\newblock Addison-Wesley Professional, 2004.
+
+\bibitem{}
+Object Management~Group (OMG).
+\newblock {\em Software \& Systems Process Engineering Meta-Model Specification 2.0}.
+\newblock OMG Document number: formal/2008-04-01, April 2008.
+\end{thebibliography}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Bibliografía Secundaria}
+    \begin{thebibliography}{1}
+\bibitem{sommerville:2010}
+Ian Sommerville.
+\newblock {\em {Software Engineering}}.
+\newblock Addison Wesley, 9 edition, 2010.
+
+
+\bibitem{Cockburn2006}
+Alistair Cockburn.
+\newblock {\em {Agile software development: the cooperative game}}
+\newblock Addison-Wesley Professional, 2006.
+
+%\bibitem{fowler:1999}
+%Martin Fowler.
+%\newblock {\em {Refactoring: Improving the Design of Existing Code}}.
+%\newblock Addison Wesley, 1999.
+
+\bibitem{}
+Ministerio de Hacienda y Administraciones Públicas.
+\newblock Metodología MÉTRICA Versión 3.
+
+\end{thebibliography}
+\end{frame}
+
+\end{document}
