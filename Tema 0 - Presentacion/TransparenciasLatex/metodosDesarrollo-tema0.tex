@@ -1,70 +1,15 @@
-\documentclass[a4paper,slidestop,xcolor=pst,dvips,blue]{beamer}
+\documentclass[animated,a4paper,slidestop,xcolor=pst,blue]{beamer}
 
-\newcommand{\imp}[1]{{\small{\sf #1}}}
+\input{slidesHeader.tex}
 
-\usepackage{beamerthemesplit}
-\usepackage[latin1]{inputenc}
-\usepackage[spanish]{babel}
-\usepackage{graphicx}
-\usepackage{pstricks} % PSTricks package
-\usepackage{setspace}
-\usepackage{multirow}
-\usepackage{listings}
-\usepackage{pgfpages}
+\title[M√©todos de Desarrollo]{M√©todos de Desarrollo}
 
-\makeatletter
-\patchcmd{\beamer@sectionintoc}{\vskip1.5em}{\vskip0.5em}{}{}
-\makeatother
-
-
-\setbeamercovered{dynamic}
-\setcounter{tocdepth}{2}
-\setbeamercolor{frametitle}{fg=black,bg=white}
-\setbeamercolor{section in toc shaded}{fg=black}
-\setbeamercolor{section in toc}{fg=red}
-\setbeamercolor{subsection in toc shaded}{fg=black}
-\setbeamercolor{subsection in toc}{fg=red}
-\setbeamerfont{section in toc}{size=\small}
-\setbeamerfont{subsection in toc}{size=\small}
-\setbeamertemplate{section in toc shaded}[default][99]
-\setbeamertemplate{subsection in toc shaded}[default][99]
-
-\setbeamertemplate{frametitle}{
-	\begin{centering}
-		\insertframetitle
-		\par
-	\end{centering}
-}
-
-\AtBeginSection[]
-{\begin{frame}[c]
-  \frametitle{Õndice}
-	\tableofcontents[currentsection,
-        sectionstyle=show/shaded,
-        subsectionstyle=hide]
-\end{frame}}
-
-\AtBeginSubsection[]
-{\begin{frame}[c]
-	\frametitle{Õndice}
-	\tableofcontents[
-  		currentsection,
-  		sectionstyle=shaded/shaded,
-  		currentsubsection,
-  		subsectionstyle=show/shaded/hide
-		]
-\end{frame}}
-
-\usetheme[secheader]{Boadilla}
-
-\title[MÈtodos de Desarrollo]{MÈtodos de Desarrollo}
-
-\author[Pablo S·nchez]{\alert{Pablo S·nchez}}
+\author[Pablo S√°nchez]{\alert{Pablo S√°nchez}}
 
 \institute[I2E]{
-		   Dpto. IngenierÌa Inform·tica y ElectrÛnica \\
+		   Dpto. Ingenier√≠a Inform√°tica y Electr√≥nica \\
 		   Universidad de Cantabria \\
-		   Santander (Cantabria, EspaÒa) \\
+		   Santander (Cantabria, Espa√±a) \\
 		   p.sanchez@unican.es
 }
 
@@ -75,9 +20,12 @@
 \begin{frame}[c]
 	\titlepage
 	\begin{columns}
-		\column{\linewidth}
+		\column{0.50\linewidth}
 			\centering
-			\includegraphics[width=.15\textwidth,keepaspectratio=true]{images/uc.eps}
+    		\includegraphics[width=.28\textwidth,keepaspectratio=true]{images/istr.eps}
+		\column{0.50\linewidth}
+			\centering
+			\includegraphics[width=.25\textwidth,keepaspectratio=true]{images/uc.eps}
 	\end{columns}
 \end{frame}
 
@@ -89,22 +37,15 @@
 		\alert{Pablo S\'{a}nchez Barreiro}  \\
 		\begin{small}
 		Despacho 1069 \\
-		Departamento de IngenierÌa Inform·tica y ElectrÛnica \\
+		Departamento de Ingenier√≠a Inform√°tica y Electr√≥nica \\
 		p.sanchez@unican.es \\
 		\end{small}
         \ \\
 		\alert{Julio L. Medina Pasaje}  \\
 		\begin{small}
 		Despacho 1080 \\
-		Departamento de IngenierÌa Inform·tica y ElectrÛnica \\
+		Departamento de Ingenier√≠a Inform√°tica y Electr√≥nica \\
 		julio.medina@unican.es \\
-		\end{small}
-        \ \\
-		\alert{Miguel Sierra S·nchez}  \\
-		\begin{small}
-		Despacho 1068 \\
-		Departamento de IngenierÌa Inform·tica y ElectrÛnica \\
-		miguel.sierra@unican.es \\
 		\end{small}
 	\end{center}
 \end{frame}
@@ -116,31 +57,28 @@
 \begin{frame}[c]
 	\frametitle{Objetivos de la Asignatura}
     \begin{enumerate}[<+->]
+        \item Conocer y comprender los fundamentos de la gesti√≥n de la configuraci√≥n.
         \item Ser capaz de gestionar configuraciones de productos software.
-        \item Conocer el concepto de integraciÛn continua.
-        \item Conocer la diferencia entre metodologÌas planificadas y ·giles.
-        \item Conocer los fundamentos de las metodologÌas ·giles.
-        \item Saber aplicar una metodologÌa desarrollo ·gil.
+        \item Conocer el concepto de integraci√≥n continua.
+        \item Conocer la diferencia entre metodolog√≠as planificadas y √°giles.
+        \item Conocer los fundamentos de las metodolog√≠as √°giles.
+        \item Saber aplicar una metodolog√≠a desarrollo √°gil.
         \item Saber modelar, analizar y evaluar procesos de desarrollo software.
-        \item Conocer una metodologÌa de desarrollo software estandarizada.
-        \item Conocer cÛmo se llevan a cabo los procesos de mantenimiento sw.
-        \item Conocer metodologÌas de desarrollo en la frontera de la investigaciÛn.
+        \item Conocer una metodolog√≠a de desarrollo software estandarizada.
+        \item Conocer c√≥mo se llevan a cabo los procesos de mantenimiento sw.
+        \item Conocer metodolog√≠as de desarrollo en la frontera de la investigaci√≥n.
 	 \end{enumerate}
 \end{frame}
 
-\subsection{Resultados de Aprendizaje}
+\subsection{Objetivos de Aprendizaje}
 
 \begin{frame}[c]
-	\frametitle{Resultados de Aprendizaje}
+	\frametitle{Objetivos de Aprendizaje}
     	\begin{enumerate}[<+->]
-            \item El alumno sabr· gestionar configuraciones de productos software utilizando \alert{Git}.
-            \item El alumno sabr· desarrollar aplicaciones utilizando \alert{SCRUM}.
-            \item El alumno sabr· modelar procesos de desarrollo sw en \alert{SPEM} utilizando \alert{EPF Composer}.
-            \item El alumno conocer· las ·reas principales y fundamentos de \alert{Metrica v3}.
-%            \item El alumno conocer· los fundamentos del desarrollo software dirigido por modelos, las lÌneas de productos software y el desarrollo software basado en componentes.
-%           \item El alumno sabr· aplicar, utilizando Eclipse, un cat·logo de \alert{refactorizaciones} comunes.
-%           \item El alumno sabr· gestionar la construcciÛn de productos software utilizando \alert{Maven}.
-%            \item El alumno sabr· gestionar procesos de integraciÛn continua utilizando \alert{Jenkins}.
+            \item El alumno sabr√° gestionar versiones de productos software utilizando \alert{Git}.
+            \item El alumno sabr√° desarrollar aplicaciones utilizando \alert{SCRUM}.
+            \item El alumno sabr√° modelar procesos de desarrollo sw en \alert{SPEM} utilizando \alert{EPF Composer}.
+            \item El alumno conocer√° las √°reas principales y fundamentos de \alert{Metricav3}.
 		\end{enumerate}
 \end{frame}
 
@@ -149,16 +87,15 @@
 \begin{frame}[c]
 	\frametitle{Temario}
 	\begin{enumerate}[<+->]
-		\item GestiÛn de la ConfiguraciÛn.
-		\item MetodologÌas ¡giles.
+		\item Gesti√≥n de la Configuraci√≥n.
+		\item Metodolog√≠as √Ågiles.
 		\item Modelado de Procesos Sw.
 		\item Procesos de Desarrollo Estandarizados.
-        \item MetodologÌas de Desarrollo Innovadoras.
-%		\item Mantenimiento y ModernizaciÛn.
+        \item Metodolog√≠as de Desarrollo Innovadoras.
 	\end{enumerate}
 \end{frame}
 
-\section{MetodologÌa}
+\section{Metodolog√≠a}
 
 \subsection{Plataforma}
 
@@ -166,8 +103,61 @@
 	\frametitle{Plataforma de Trabajo}
 	\begin{itemize}
 		\item<1-> La plataforma de trabajo de la asignatura es \emph{moodle}.
-		\item<2-> Todas las notificaciones y publicaciones se har·n a travÈs de \emph{moodle}.
-		\item<3-> \alert{Es obligaciÛn del alumno estar atento a las posibles notificaciones y avisos que se realicen a travÈs de \emph{moodle}}.
+		\item<2-> Todas las notificaciones y publicaciones se har√°n a trav√©s de \emph{moodle}.
+		\item<3-> \alert{Es obligaci√≥n del alumno estar atento a las posibles notificaciones y avisos que se realicen a trav√©s de \emph{moodle}}.
+	\end{itemize}
+\end{frame}
+
+\subsection{Actividades}
+
+\begin{frame}
+	\frametitle{Clases en Aula}
+	\begin{block}{Objetivo}
+        Entender los conocimientos te√≥ricos que constituyen la base de las habilidades y destrezas a adquirir al final de la asignatura.
+	\end{block}
+	\begin{itemize}
+		\item<2-> \alert{Sin conocimiento te√≥rico es imposible alcanzar las habilidades pr√°cticas}.
+        \item<3-> La asistencia a clases no es obligatoria, \alert{pero si altamente recomendable e incluso necesaria}.
+        \item<4-> La asignatura no est√° dise√±ada para ser seguida a distancia.		
+        \item<5-> Clases magistrales utilizando pizarra y/o transparencias.
+		\item<6-> \alert{Las transparencias} son material de apoyo a la docencia, \alert{no son apuntes}.
+        \item<7-> Visualizaci√≥n de v√≠deotutoriales para la utilizaci√≥n de herramientas.
+        \item<8-> Por cada tema existir√° un itinerario que indicar√° c√≥mo preparar el tema de forma aut√≥noma.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[c]
+	\frametitle{Clases en Laboratorio}
+	\begin{block}{Objetivo}
+        Aplicar los conceptos te√≥ricos aprendidos en las clases de aula al casos de estudio reales de mediana escala, con el objetivo de desarrollar las competencias deseadas.
+	\end{block}
+	\begin{itemize}[<+->]
+        \item Realizaci√≥n de peque√±as pr√°cticas guiadas y no calificables.
+        \item Desarrollo \alert{en grupo} de un proyecto sw utilizando \emph{SCRUM}.
+        \item Dicho proyecto se integrar√° con las asignaturas de \emph{Calidad y Auditor√≠a} y \emph{Procesos de Ingenier√≠a del Software}.
+        \item Modelado de una metodolog√≠a sw en \emph{SPEM}.
+	\end{itemize}
+\end{frame}
+
+\subsection{Proyecto Integrado}
+
+\begin{frame}[c]
+	\frametitle{Proyecto Sw Integrado}
+	\begin{itemize}[<+->]
+        \item Durante las semanas 5 a 10 se trabajar√° exclusivamente en el desarrollo de un proyecto sw utilizando \emph{Scrum} como metodolog√≠a.
+        \item No hay clases te√≥ricas, s√≥lo clases de laboratorio.
+        \item Los alumnos deber√°n desarrollar en grupos de 4-6 alumnos una aplicaci√≥n \emph{Android} para la visualizaci√≥n de una fuente externa de datos.
+        \item Adem√°s, la asignatura de \emph{Calidad y Auditor√≠a} integra sus cuatro horas con la asignatura de \emph{M√©todos de Desarrollo} y \emph{Procesos de Ingenier√≠a del Sw} integra dos horas.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[c]
+	\frametitle{Proyecto Sw Integrado}
+	\begin{itemize}[<+->]
+        \item Se utilizar√°n durante el desarrollo del proyecto conceptos y t√©cnicas de las tres asignaturas.
+        \item Se utilizar√°n diferentes partes del proyecto para evaluar cada asignatura por separado.
+        \item La integraci√≥n permite desarrollar proyectos de mayor envergadura y trabajar como si se hiciese en una empresa real.
+        \item La no asistencia a clases durante el proyecto integrado deber√° estar aceptada por el resto del grupo de pr√°cticas.
 	\end{itemize}
 \end{frame}
 
@@ -179,68 +169,15 @@
 	\begin{center}
 	\begin{tabular}{||l|c|c|c|c|c||}
 	\hline \hline
-				   & Lunes         & Martes  & MiÈrcoles & Jueves  & Viernes \\ \hline \hline
-    08:30 - 09:30  &               &         &  MÈtodos  & MÈtodos &         \\ \hline
-    09:30 - 10:30  &               &         &           &         &         \\ \hline
-    10:45 - 11:45  & MÈtodos (Lab) &         &           &         &         \\ \hline
-	11:45 - 12:45  & MÈtodos (Lab) &         &           &         &         \\ \hline
-	12:45 - 13:45  &               &         &           &         &         \\ \hline \hline
+				   & Lunes   & Martes  & Mi√©rcoles & Jueves  & Viernes \\ \hline \hline
+    08:30 - 09:30  &         &         &  M√©todos  & M√©todos &         \\ \hline
+    09:30 - 10:30  &         &         &           &         &         \\ \hline
+    10:45 - 11:45  & M√©todos &         &           &         &         \\ \hline
+	11:45 - 12:45  & M√©todos &         &           &         &         \\ \hline
+	12:45 - 13:45  &         &         &           &         &         \\ \hline \hline
 	\end{tabular}
 	\end{center}
 	\end{small}
-%	\begin{itemize}
-%		\item<2-> La asistencia a las clases teÛricas y pr·cticas no es obligatoria (salvo excepciones ocasionales), \uncover<3->{\alert{pero muy necesaria}.}
-%        \item<4-> En cualquier caso, la no asistencia a clases pr·cticas deber· estar aceptada por el resto del grupo de pr·cticas.
-%	\end{itemize}
-\end{frame}
-
-
-\subsection{Actividades}
-
-\begin{frame}
-	\frametitle{Clases en Aula}
-	\begin{block}{Objetivo}
-        Entender los conocimientos teÛricos que constituyen la base de las habilidades y destrezas a adquirir al final de la asignatura.
-	\end{block}
-	\begin{itemize}[<+->]
-		\item Clases magistrales utilizando pizarra y/o transparencias.
-		\item \alert{Las transparencias} son material de apoyo a la docencia, \alert{no son apuntes}.
-        \item VisualizaciÛn de vÌdeos con exposiciones teÛricas.
-        \item VisualizaciÛn de vÌdeotutoriales para la utilizaciÛn de herramientas.
-        \item Por cada tema existir· un itinerario que indicar· cÛmo preparar el tema de forma autÛnoma.
-%        \item \textbf{Opcional:} PreparaciÛn autÛnoma y exposiciÛn del contenido teÛrico.
-%        \item Actividades de aprendizaje activo en funciÛn del contenido y
-% predisposiciÛn del alumnado.
-		\item \alert{Sin conocimiento teÛrico es imposible alcanzar las habilidades pr·cticas}.
-	\end{itemize}
-\end{frame}
-
-\begin{frame}[c]
-	\frametitle{Clases en Laboratorio}
-	\begin{block}{Objetivo}
-        Aplicar los conceptos teÛricos aprendidos en las clases de aula al casos de estudio reales de mediana escala, con el objetivo de desarrollar las competencias deseadas.
-	\end{block}
-	\begin{itemize}[<+->]
-        \item Modelado de una metodologÌa sw en \emph{SPEM}.
-        \item RealizaciÛn de pequeÒas pr·cticas guiadas y no calificables.
-        \item Desarrollo \alert{en grupo} de un proyecto sw utilizando \emph{SCRUM}.
-        \item Dicho proyecto se integrar· con las asignaturas de \emph{Calidad y AuditorÌa} y \emph{Procesos de IngenierÌa del Software}.
-	\end{itemize}
-\end{frame}
-
-\subsection{Proyecto Integrado}
-
-\begin{frame}[c]
-	\frametitle{Proyecto Sw Integrado}
-	\begin{itemize}[<+->]
-        \item Durante las semanas 5 a 10 se trabajar· exclusivamente en el desarrollo de un proyecto sw utilizando \emph{Scrum} como metodologÌa.
-        \item No hay clases teÛricas, sÛlo clases de laboratorio.
-        \item Los alumnos deber·n desarrollar en grupos de 4-6 alumnos una aplicaciÛn \emph{Android} para la visualizaciÛn de una fuente externa de datos.
-        \item Adem·s, la asignatura de \emph{Calidad y AuditorÌa} integra sus 4 horas con la asignatura de \emph{MÈtodos de Desarrollo} y \emph{Procesos de IngenierÌa del Sw} integra dos horas.
-        \item Se utilizar·n durante el desarrollo del proyecto conceptos y tÈcnicas de las tres asignaturas.
-        \item Se utilizar·n diferentes partes del proyecto para evaluar cada asignatura por separado.
-        \item La integraciÛn permite desarrollar proyectos de mayor envergadura y trabajar como si se hiciese en una empresa real.
-	\end{itemize}
 \end{frame}
 
 \begin{frame}[c]
@@ -249,7 +186,7 @@
 	\begin{center}
 	\begin{tabular}{||l|c|c|c|c|c||}
 	\hline \hline
-				   & Lunes     & Martes   & MiÈrcoles & Jueves   & Viernes \\ \hline \hline
+				   & Lunes     & Martes   & Mi√©rcoles & Jueves   & Viernes \\ \hline \hline
     08:30 - 09:30  & Proyecto  & Proyecto & Proyecto  & Proyecto &         \\ \hline
     09:30 - 10:30  & Proyecto  & Proyecto & Proyecto  & Proyecto &         \\ \hline
     10:45 - 11:45  & Proyecto  &          &           &          &         \\ \hline
@@ -260,30 +197,28 @@
 	\end{small}
 \end{frame}
 
-\section{MÈtodos de EvaluaciÛn/CalificaciÛn}
+\section{M√©todos de Evaluaci√≥n/Calificaci√≥n}
 
 \begin{frame}[c]
-	\frametitle{C·lculo de la CalificaciÛn Final}
-	\begin{block}{FÛrmula de C·lculo de la CalificaciÛn Final}
-%        Calificacion Final = Scrum $\times$ 0.70 + SPEM  $\times$ 0.15 + Git $\times$ 0.15
-
+	\frametitle{C√°lculo de la Calificaci√≥n Final}
+	\begin{block}{F√≥rmula de C√°lculo de la Calificaci√≥n Final}
 		\begin{tabular}{lll}
 			Calificacion Final = & Scrum & $\times \ 0.70 \ + $ \\
-                                 & SPEM  & $\times \ 0.15 \  + $ \\
+                                 & SPEM  & $\times \ 0.15 \ + $ \\
                                  & Git   & $\times \ 0.15 \   $ \\
 		\end{tabular}
 	\end{block}
 	\begin{itemize}
-		\item<2-> Hay que obtener una calificaciÛn mÌnima de 5.00 en la parte de Scrum para poder superar la asignatura.
-		\item<3-> Hay que obtener una calificaciÛn mÌnima de 3.00 de media en las otras partes para poder superar la asignatura.
-        \item<4-> Cada parte a su vez se dividir· en diversos elementos evaluables.
+		\item<2-> Hay que obtener una calificaci√≥n m√≠nima de 5.00 en la parte de Scrum para poder superar la asignatura.
+		\item<3-> Hay que obtener una calificaci√≥n m√≠nima de 3.00 de media en las otras partes para poder superar la asignatura.
+        \item<4-> Cada parte a su vez se dividir√° en diversos elementos evaluables.
 	\end{itemize}
 \end{frame}
 
-\section{BibliografÌa}
+\section{Bibliograf√≠a}
 
 \begin{frame}
-    \frametitle{BibliografÌa Principal}
+    \frametitle{Bibliograf√≠a Principal}
     \begin{thebibliography}{1}
 
 \bibitem{Chacon2014}
@@ -309,7 +244,7 @@ Object Management~Group (OMG).
 \end{frame}
 
 \begin{frame}
-    \frametitle{BibliografÌa Secundaria}
+    \frametitle{Bibliograf√≠a Secundaria}
     \begin{thebibliography}{1}
 \bibitem{sommerville:2010}
 Ian Sommerville.
@@ -328,8 +263,8 @@ Alistair Cockburn.
 %\newblock Addison Wesley, 1999.
 
 \bibitem{}
-Ministerio de Hacienda y Administraciones P˙blicas.
-\newblock MetodologÌa M…TRICA VersiÛn 3.
+Ministerio de Hacienda y Administraciones P√∫blicas.
+\newblock Metodolog√≠a M√âTRICA Versi√≥n 3.
 
 \end{thebibliography}
 \end{frame}
