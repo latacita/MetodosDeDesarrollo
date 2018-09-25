@@ -1,4 +1,4 @@
-\documentclass[animated,a4paper,slidestop,xcolor=pst,blue]{beamer}
+\documentclass[handout,a4paper,slidestop,dvips,xcolor=pst,blue]{beamer}
 
 \input{slidesHeader.tex}
 
@@ -30,9 +30,9 @@
 \begin{frame}[c]
     \frametitle{\alert{Advertencia}}
     \begin{center}
-        Todo el material contenido en este documento  no constituye en modo alguno una obra de referencia o apuntes oficiales mediante el cual se puedan preparar las pruebas evaluables necesarias para superar la asignatura. \ \\
+        Todo el material contenido en este documento  no constituye en modo alguno una obra de referencia o apuntes oficiales mediante los cuales se puedan preparar de manera autónoma las pruebas necesarias para superar la asignatura. \ \\
         \ \\
-        Este documento contiene exclusivamente una serie de diapositivas cuyo objetivo es servir de complemento visual a las actividades realizadas en el aula para la transmisión del contenido sobre el cual versarán las mencionadas pruebas evaluables.  \ \\
+        Este documento contiene exclusivamente una serie de diapositivas cuyo objetivo es servir de complemento visual a las actividades realizadas en el aula.  \ \\
         \ \\
         Dicho de forma más clara, \alert{estas transparencias no son apuntes y su objetivo no es en modo alguno servir para que el alumno pueda preparar la asignatura.}
     \end{center}
@@ -73,7 +73,7 @@
 \begin{frame}[t]
 	\frametitle{Gestión de la Configuración de Sistemas Software}
 	\ \\
-	\only<1>{
+	\only<1|handout:0>{
 	\rput[lt](0,1){\includegraphics[clip=true,width=\linewidth]{images/introduction/swProcess00.eps}}}
 	\only<2>{
 	\rput[lt](0,1){\includegraphics[clip=true,width=\linewidth]{images/introduction/swProcess01.eps}}}
@@ -132,13 +132,13 @@
 
 \begin{frame}[t]
 	\frametitle{Áreas de la Gestión de la Configuración Sw}
-    \only<1>{
+    \only<1|handout:0>{
     \rput[lt](0.5,0){
         \includegraphics[width=11cm,keepaspectratio=true]{images/elementosGc/esquemaGc00.eps}}}
-    \only<2>{
+    \only<2|handout:0>{
     \rput[lt](0.5,0){
         \includegraphics[width=11cm,keepaspectratio=true]{images/elementosGc/esquemaGc01.eps}}}
-    \only<3>{
+    \only<3|handout:0>{
     \rput[lt](0.5,0){
         \includegraphics[width=11cm,keepaspectratio=true]{images/elementosGc/esquemaGc02.eps}}}
     \only<4>{
@@ -150,16 +150,16 @@
 
 \begin{frame}[t]
 	\frametitle{Integración y Entrega Continua}
-    \only<1>{
+    \only<1|handout:0>{
     \rput[lt](0.5,0){
         \includegraphics[width=11cm,keepaspectratio=true]{images/elementosGc/ci00.eps}}}
-    \only<2>{
+    \only<2|handout:0>{
     \rput[lt](0.5,0){
         \includegraphics[width=11cm,keepaspectratio=true]{images/elementosGc/ci01.eps}}}
-    \only<3>{
+    \only<3|handout:0>{
     \rput[lt](0.5,0){
         \includegraphics[width=11cm,keepaspectratio=true]{images/elementosGc/ci02.eps}}}
-    \only<4>{
+    \only<4|handout:0>{
     \rput[lt](0.5,0){
         \includegraphics[width=11cm,keepaspectratio=true]{images/elementosGc/ci03.eps}}}
     \only<5>{
@@ -213,9 +213,9 @@
 	\frametitle{Git}
 	 \begin{enumerate}[<+->]
         \item Distribuido y descentralizado.
-        \item Instánteneas en lugar de incrementos.
+        \item Instantáneas en lugar de incrementos.
         \item Operaciones preferentemente locales.
-        \item Chequea integridad.
+        \item Verifica la integridad de los archivos.
 	 \end{enumerate}
 \end{frame}
 
@@ -259,45 +259,42 @@
 
 \begin{frame}[t]
 	\frametitle{Ciclo de Vida de Ficheros en Git}
-%    \only<1>{
-%    \rput[lt](0,0){
-%        \includegraphics[width=12cm,keepaspectratio=true]{images/git/cicloDeVida00.eps}}}
-%    \only<2>{
-%    \rput[lt](0,0){
-%        \includegraphics[width=12cm,keepaspectratio=true]{images/git/cicloDeVida01.eps}}}
-%    \only<3>{
-%    \rput[lt](0,0){
-%        \includegraphics[width=12cm,keepaspectratio=true]{images/git/cicloDeVida02.eps}}}
-%    \only<4>{
-%    \rput[lt](0,0){
-%        \includegraphics[width=12cm,keepaspectratio=true]{images/git/cicloDeVida03.eps}}}
-%    \only<5>{
-%    \rput[lt](0,0){
-%        \includegraphics[width=12cm,keepaspectratio=true]{images/git/cicloDeVida04.eps}}}
-%    \only<6>{
-%    \rput[lt](0,0){
-%        \includegraphics[width=12cm,keepaspectratio=true]{images/git/cicloDeVida05.eps}}}
-    \only<7>{
+    \only<1|handout:0>{
+    \rput[lt](0,0){
+        \includegraphics[width=12cm,keepaspectratio=true]{images/git/cicloDeVida00.eps}}}
+    \only<2|handout:0>{
+    \rput[lt](0,0){
+        \includegraphics[width=12cm,keepaspectratio=true]{images/git/cicloDeVida01.eps}}}
+    \only<3|handout:0>{
+    \rput[lt](0,0){
+        \includegraphics[width=12cm,keepaspectratio=true]{images/git/cicloDeVida02.eps}}}
+    \only<4|handout:0>{
+    \rput[lt](0,0){
+        \includegraphics[width=12cm,keepaspectratio=true]{images/git/cicloDeVida03.eps}}}
+    \only<5|handout:0>{
+    \rput[lt](0,0){
+        \includegraphics[width=12cm,keepaspectratio=true]{images/git/cicloDeVida04.eps}}}
+    \only<6|handout:0>{
+    \rput[lt](0,0){
+        \includegraphics[width=12cm,keepaspectratio=true]{images/git/cicloDeVida05.eps}}}
+    \only<7|handout:0>{
     \rput[lt](0,0){
         \includegraphics[width=12cm,keepaspectratio=true]{images/git/cicloDeVida06.eps}}}
-%    \only<8>{
-%    \rput[lt](0,0){
-%        \includegraphics[width=12cm,keepaspectratio=true]{images/git/cicloDeVida07.eps}}}
+    \only<8>{
+    \rput[lt](0,0){
+        \includegraphics[width=12cm,keepaspectratio=true]{images/git/cicloDeVida07.eps}}}
 \end{frame}
 
 \begin{frame}[c]
-	\frametitle{Otros Comandos y Elementos Básicos}
+	\frametitle{Comandos Básicos}
 	 \begin{description}[<+->]
         \item[status] Muestra el estado del directorio de trabajo.
-        \item[log] Muestra el historial de acciones realizadas.
-        \item[rm] Borra ficheros (informando al control de versiones).
-        \item[mv] Renombra un fichero (informando al control de versiones).
-        \item[tag] Asocia una etiqueta a una determinada version para facilitar su identificación.
         \item[.gitignore] Fichero que contiene una lista de archivos que deben ser ignorados por el control de versiones.
+        \item[log] Muestra el historial de \emph{commits} realizados.
 	 \end{description}
 \end{frame}
 
-\subsection{Desplazamiento entre Versiones}
+\subsection{Esquema de Versionado}
 
 \begin{frame}[c]
 	\frametitle{Versionado basado en Deltas}
@@ -315,7 +312,7 @@
 
 \begin{frame}[t]
 	\frametitle{Estructura de Versionado en Git}
-    \only<1>{
+    \only<1|handout:0>{
     \rput[lt](2.5,-0.5){
         \includegraphics[width=7cm,keepaspectratio=true]{images/git/commitStructure00.eps}}}
     \only<2>{
@@ -323,29 +320,20 @@
         \includegraphics[width=7cm,keepaspectratio=true]{images/git/commitStructure01.eps}}}
 \end{frame}
 
-\begin{frame}[c]
-	\frametitle{Recuperación de Versiones Antiguas}
-	 \begin{description}[<+->]
-        \item[checkout] Restaura la versión indicada.
-        \item[reset] Retrocede hasta la versión indicada, borrando los commits intermedios.
-        \item[revert] Desahace los cambios realizados hasta volver a la versión indicada. Se crean versiones intermedias para deshacer los cambios.
-	 \end{description}
-\end{frame}
-
 \subsection{Ramificación y Fusión}
 
 \begin{frame}
 	\frametitle{Ramificación y Fusión}
-    \only<1>{
+    \only<1|handout:0>{
     \rput[lt](0.5,-1.5){
         \includegraphics[width=11cm,keepaspectratio=true]{images/git/branching00.eps}}}
-    \only<2>{
+    \only<2|handout:0>{
     \rput[lt](0.5,-1.5){
         \includegraphics[width=11cm,keepaspectratio=true]{images/git/branching01.eps}}}
-    \only<3>{
+    \only<3|handout:0>{
     \rput[lt](0.5,-1.5){
         \includegraphics[width=11cm,keepaspectratio=true]{images/git/branching02.eps}}}
-    \only<4>{
+    \only<4|handout:0>{
     \rput[lt](0.5,-1.5){
         \includegraphics[width=11cm,keepaspectratio=true]{images/git/branching03.eps}}}
     \only<5>{
@@ -356,21 +344,21 @@
 
 \begin{frame}[t]
 	\frametitle{Ramificación}
-%    \only<1>{
-%    \rput[lt](1,0){
-%        \includegraphics[width=9cm,keepaspectratio=true]{images/git/crearRama00.eps}}}
-%    \only<2>{
-%    \rput[lt](1,0){
-%        \includegraphics[width=9cm,keepaspectratio=true]{images/git/crearRama01.eps}}}
-%    \only<3>{
-%    \rput[lt](1,0){
-%        \includegraphics[width=9cm,keepaspectratio=true]{images/git/crearRama02.eps}}}
-%    \only<4>{
-%    \rput[lt](1,0){
-%        \includegraphics[width=9cm,keepaspectratio=true]{images/git/crearRama03.eps}}}
-%    \only<5>{
-%    \rput[lt](1,0){
-%        \includegraphics[width=9cm,keepaspectratio=true]{images/git/crearRama04.eps}}}
+    \only<1|handout:0>{
+    \rput[lt](1,0){
+        \includegraphics[width=9cm,keepaspectratio=true]{images/git/crearRama00.eps}}}
+    \only<2|handout:0>{
+    \rput[lt](1,0){
+        \includegraphics[width=9cm,keepaspectratio=true]{images/git/crearRama01.eps}}}
+    \only<3|handout:0>{
+    \rput[lt](1,0){
+        \includegraphics[width=9cm,keepaspectratio=true]{images/git/crearRama02.eps}}}
+    \only<4|handout:0>{
+    \rput[lt](1,0){
+        \includegraphics[width=9cm,keepaspectratio=true]{images/git/crearRama03.eps}}}
+    \only<5|handout:0>{
+    \rput[lt](1,0){
+        \includegraphics[width=9cm,keepaspectratio=true]{images/git/crearRama04.eps}}}
     \only<6>{
     \rput[lt](1,0){
         \includegraphics[width=9cm,keepaspectratio=true]{images/git/crearRama05.eps}}}
@@ -388,7 +376,7 @@
 
 \begin{frame}[t]
 	\frametitle{Fusión por Recursión}
-    \only<1>{
+    \only<1|handout:0>{
     \rput[lt](0.5,-0.5){
         \includegraphics[width=10cm,keepaspectratio=true]{images/git/recursion00.eps}}}
     \only<2>{
@@ -406,9 +394,9 @@
 
 \begin{frame}[t]
 	\frametitle{Fusión por Reorganización}
-%    \only<1>{
-%    \rput[lt](0.5,-0.5){
-%        \includegraphics[width=10cm,keepaspectratio=true]{images/git/rebase00.eps}}}
+    \only<1|handout:0>{
+    \rput[lt](0.5,-0.5){
+        \includegraphics[width=10cm,keepaspectratio=true]{images/git/rebase00.eps}}}
     \only<2>{
     \rput[lt](0.5,-0.5){
         \includegraphics[width=10cm,keepaspectratio=true]{images/git/rebase01.eps}}}
@@ -418,6 +406,8 @@
 	\frametitle{Comandos Ramificación y Fusión}
 	 \begin{description}[<+->]
         \item[Branch] Permite la gestión de ramas.
+        \item[Checkout] Se desplaza la versión indicada.
+        \item[Tag] Asocia una etiqueta a una determinada version para facilitar su identificación.
         \item[Merge] Fusiona dos ramas.
         \item[Rebase] Reorganiza dos ramas.
 	 \end{description}
@@ -435,11 +425,11 @@
 	 \end{description}
 \end{frame}
 
-\subsection{Repositorios remotos}
+\subsection{Repositorios Remotos}
 
 \begin{frame}[t]
 	\frametitle{Clonado y Seguimiento de Ramas}
-    \only<1>{
+    \only<1|handout:0>{
     \rput[lt](0,-0.5){
         \includegraphics[width=11cm,keepaspectratio=true]{images/git/clone00.eps}}}
     \only<2>{
@@ -448,11 +438,24 @@
 \end{frame}
 
 \begin{frame}[t]
+	\frametitle{Fetch}
+    \only<1|handout:0>{
+    \rput[lt](0,-0.5){
+        \includegraphics[width=11cm,keepaspectratio=true]{images/git/fetch00.eps}}}
+    \only<2>{
+    \rput[lt](0,-0.5){
+        \includegraphics[width=11cm,keepaspectratio=true]{images/git/fetch01.eps}}}
+    \only<3>{
+    \rput[lt](0,-0.5){
+        \includegraphics[width=11cm,keepaspectratio=true]{images/git/fetch02.eps}}}
+\end{frame}
+
+\begin{frame}[t]
 	\frametitle{Pull}
-    \only<1>{
+    \only<1|handout:0>{
     \rput[lt](0,-0.5){
         \includegraphics[width=11cm,keepaspectratio=true]{images/git/pull00.eps}}}
-    \only<2>{
+    \only<2|handout:0>{
     \rput[lt](0,-0.5){
         \includegraphics[width=11cm,keepaspectratio=true]{images/git/pull01.eps}}}
     \only<3>{
@@ -462,10 +465,10 @@
 
 \begin{frame}[t]
 	\frametitle{Push}
-    \only<1>{
+    \only<1|handout:0>{
     \rput[lt](0,-0.5){
         \includegraphics[width=11cm,keepaspectratio=true]{images/git/push00.eps}}}
-    \only<2>{
+    \only<2|handout:0>{
     \rput[lt](0,-0.5){
         \includegraphics[width=11cm,keepaspectratio=true]{images/git/push01.eps}}}
     \only<3>{
@@ -475,15 +478,15 @@
 
 \begin{frame}[t]
 	\frametitle{Conflictos de Sincronización}
-%    \only<1>{
-%    \rput[lt](2,0){
-%        \includegraphics[width=8cm,keepaspectratio=true]{images/git/harrySally08.eps}}}
-%    \only<2>{
-%    \rput[lt](2,0){
-%        \includegraphics[width=8cm,keepaspectratio=true]{images/git/harrySally09.eps}}}
-%    \only<3>{
-%    \rput[lt](2,0){
-%        \includegraphics[width=8cm,keepaspectratio=true]{images/git/harrySally10.eps}}}
+    \only<1|handout:0>{
+    \rput[lt](2,0){
+        \includegraphics[width=8cm,keepaspectratio=true]{images/git/harrySally08.eps}}}
+    \only<2|handout:0>{
+    \rput[lt](2,0){
+        \includegraphics[width=8cm,keepaspectratio=true]{images/git/harrySally09.eps}}}
+    \only<3|handout:0>{
+    \rput[lt](2,0){
+        \includegraphics[width=8cm,keepaspectratio=true]{images/git/harrySally10.eps}}}
     \only<4>{
     \rput[lt](2,0){
         \includegraphics[width=8cm,keepaspectratio=true]{images/git/harrySally11.eps}}}
@@ -491,31 +494,36 @@
 
 \begin{frame}[t]
 	\frametitle{Conflictos de Sincronización}
-%    \only<1>{
-%    \rput[lt](2,0){
-%        \includegraphics[width=8cm,keepaspectratio=true]{images/git/harrySally12.eps}}}
-%    \only<2>{
-%    \rput[lt](2,0){
-%        \includegraphics[width=8cm,keepaspectratio=true]{images/git/harrySally13.eps}}}
-%    \only<3>{
-%    \rput[lt](2,0){
-%        \includegraphics[width=8cm,keepaspectratio=true]{images/git/harrySally14.eps}}}
-    \only<4>{
+    \only<1|handout:0>{
+    \rput[lt](2,0){
+        \includegraphics[width=8cm,keepaspectratio=true]{images/git/harrySally12.eps}}}
+    \only<2|handout:0>{
+    \rput[lt](2,0){
+        \includegraphics[width=8cm,keepaspectratio=true]{images/git/harrySally13.eps}}}
+    \only<3|handout:0>{
+    \rput[lt](2,0){
+        \includegraphics[width=8cm,keepaspectratio=true]{images/git/harrySally14.eps}}}
+    \only<4|handout:0>{
     \rput[lt](2,0){
         \includegraphics[width=8cm,keepaspectratio=true]{images/git/harrySally15.eps}}}
 \end{frame}
 
-\begin{frame}[t]
-	\frametitle{Fetch}
-    \only<1>{
-    \rput[lt](0,-0.5){
-        \includegraphics[width=11cm,keepaspectratio=true]{images/git/fetch00.eps}}}
-    \only<2>{
-    \rput[lt](0,-0.5){
-        \includegraphics[width=11cm,keepaspectratio=true]{images/git/fetch01.eps}}}
-    \only<3>{
-    \rput[lt](0,-0.5){
-        \includegraphics[width=11cm,keepaspectratio=true]{images/git/fetch02.eps}}}
+\subsection{Deshacer Cambios en Git}
+
+\begin{frame}[c]
+	\frametitle{Recuperación de Versiones Antiguas}
+	 \begin{description}[<+->]
+        \item[reset] Retrocede hasta la versión indicada, borrando los commits intermedios.
+        \item[revert] Deshace los cambios realizados hasta volver a la versión indicada. Se crean versiones intermedias para deshacer los cambios.
+	 \end{description}
+\end{frame}
+
+\begin{frame}[c]
+	\frametitle{Borrado y Renombrado}
+	 \begin{description}[<+->]
+        \item[rm] Borra ficheros (informando al control de versiones).
+        \item[mv] Renombra un fichero (informando al control de versiones).
+	 \end{description}
 \end{frame}
 
 \subsection{Modelos Organizativos con Git}
@@ -529,27 +537,27 @@
 
 \begin{frame}[t]
 	\frametitle{Integrador Destacado}
-%    \only<1>{
-%    \rput[lt](0.5,0){
-%        \includegraphics[width=11cm,keepaspectratio=true]{images/git/pullRequest00.eps}}}
-%    \only<2>{
-%    \rput[lt](0.5,0){
-%        \includegraphics[width=11cm,keepaspectratio=true]{images/git/pullRequest01.eps}}}
-%    \only<3>{
-%    \rput[lt](0.5,0){
-%        \includegraphics[width=11cm,keepaspectratio=true]{images/git/pullRequest02.eps}}}
-%    \only<4>{
-%    \rput[lt](0.5,0){
-%        \includegraphics[width=11cm,keepaspectratio=true]{images/git/pullRequest03.eps}}}
-%    \only<5>{
-%    \rput[lt](0.5,0){
-%        \includegraphics[width=11cm,keepaspectratio=true]{images/git/pullRequest04.eps}}}
-%    \only<6>{
-%    \rput[lt](0.5,0){
-%        \includegraphics[width=11cm,keepaspectratio=true]{images/git/pullRequest05.eps}}}
-%    \only<7>{
-%    \rput[lt](0.5,0){
-%        \includegraphics[width=11cm,keepaspectratio=true]{images/git/pullRequest06.eps}}}
+    \only<1|handout:0>{
+    \rput[lt](0.5,0){
+        \includegraphics[width=11cm,keepaspectratio=true]{images/git/pullRequest00.eps}}}
+    \only<2|handout:0>{
+    \rput[lt](0.5,0){
+        \includegraphics[width=11cm,keepaspectratio=true]{images/git/pullRequest01.eps}}}
+    \only<3|handout:0>{
+    \rput[lt](0.5,0){
+        \includegraphics[width=11cm,keepaspectratio=true]{images/git/pullRequest02.eps}}}
+    \only<4|handout:0>{
+    \rput[lt](0.5,0){
+        \includegraphics[width=11cm,keepaspectratio=true]{images/git/pullRequest03.eps}}}
+    \only<5|handout:0>{
+    \rput[lt](0.5,0){
+        \includegraphics[width=11cm,keepaspectratio=true]{images/git/pullRequest04.eps}}}
+    \only<6|handout:0>{
+    \rput[lt](0.5,0){
+        \includegraphics[width=11cm,keepaspectratio=true]{images/git/pullRequest05.eps}}}
+    \only<7|handout:0>{
+    \rput[lt](0.5,0){
+        \includegraphics[width=11cm,keepaspectratio=true]{images/git/pullRequest06.eps}}}
     \only<8>{
     \rput[lt](0.5,0){
         \includegraphics[width=11cm,keepaspectratio=true]{images/git/pullRequest07.eps}}}
