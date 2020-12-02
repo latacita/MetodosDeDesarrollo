@@ -1,0 +1,536 @@
+\documentclass[animated,a4paper,slidestop,xcolor=pst,blue]{beamer}
+
+\input{slidesHeader.tex}
+
+\title[Metodologías Ágiles]{Metodologías de Desarrollo Sw Ágiles}
+
+\author[P. Sánchez]{\alert{Pablo Sánchez}}
+
+\institute[IIE]{
+		   Dpto. Ingeniería Informática y Electrónica \\
+		   Universidad de Cantabria \\
+		   Santander (Cantabria, España) \\
+		   \texttt{p.sanchez@unican.es}
+}
+
+\date{}
+
+\begin{document}
+
+\begin{frame}[c]
+	\titlepage
+	\begin{columns}
+		\column{0.50\linewidth}
+			\centering
+    		\includegraphics[width=.28\textwidth,keepaspectratio=true]{images/istr.eps}
+		\column{0.50\linewidth}
+			\centering
+			\includegraphics[width=.25\textwidth,keepaspectratio=true]{images/uc.eps}
+	\end{columns}
+\end{frame}
+
+\begin{frame}[c]
+    \frametitle{\alert{Advertencia}}
+    \begin{center}
+        Todo el material contenido en este documento  no constituye en modo alguno una obra de referencia o apuntes oficiales mediante los cuales se puedan preparar de manera autónoma las pruebas necesarias para superar la asignatura. \ \\
+        \ \\
+        Este documento contiene exclusivamente una serie de diapositivas cuyo objetivo es servir de complemento visual a las actividades realizadas en el aula.  \ \\
+        \ \\
+        Dicho de forma más clara, \alert{estas transparencias no son apuntes y su objetivo no es en modo alguno servir para que el alumno pueda preparar la asignatura.}
+    \end{center}
+\end{frame}
+
+\section{Introducción}
+
+\begin{frame}[c]
+    \frametitle{Objetivos del Tema}
+    \begin{enumerate}[<+->]
+         \item Conocer y comprender los principios básicos de las metodologías de desarrollo software ágiles.
+         \item Conocer y saber usar los conceptos y técnicas más comúnmente utilizados por las metodologías ágiles.
+         \item Conocer las principales metodologías ágiles actuales, sabiendo distinguir sus características principales.
+         \item Ser capaz de desarrollar proyectos sw utilizando \alert{Scrum}.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}[c]
+    \frametitle{Bibliografía}
+    \begin{thebibliography}{1}
+
+    \bibitem[Schwaber and Sutherland, 2011]{Schwaber2011}
+    Schwaber, K. and Sutherland, J. (2011).
+    \newblock {The Scrum Guide - The Definitive Guide to Scrum: The Rules of the Game}.
+
+    \bibitem[Cohn, 2004]{Cohn2004}
+    Cohn, M. (2004).
+    \newblock {\em {User Stories Applied}},
+    \newblock Addison-Wesley.
+
+    \bibitem[Cockburn, 2006]{Cockburn2006}
+    Cockburn, A. (2006).
+    \newblock {\em {Agile Software Development: The Cooperative Game}},
+    \newblock Addison-Wesley, 2\textsuperscript{a} edición.
+
+    \end{thebibliography}
+\end{frame}
+
+\begin{frame}[c]
+    \frametitle{Bibliografía}
+    \begin{thebibliography}{1}
+    \bibitem[{Poppendieck, Mary Poppendieck}, 2003]{Poppendieck2003}
+    {Poppendieck, M and Poppendieck, T.} (2003).
+    \newblock {\em {Lean Software Development: An Agile Toolkit}}.
+    \newblock Addison-Wesley.
+
+    \bibitem[Anderson and Reinertsen, 2010]{Anderson2010}
+    Anderson, D.~J. and Reinertsen, D.~G. (2010).
+    \newblock {\em {Kanban: Successful Evolutionary Change for Your Technology Business}}.
+    \newblock Blue Hole Press.
+
+    \bibitem[Sommerville, 2010]{sommerville:2010}
+    Sommerville, I. (2010).
+    \newblock {\em {Software Engineering}}.
+    \newblock Addison Wesley, 9\textsuperscript{a} edición.
+
+    \bibitem[Bourque and Dupuis, 2004]{ieee:swebok}
+    Bourque, P. and Dupuis, R., editores (2004).
+    \newblock {\em {Guide to the Software Engineering Body of Knowledge}}.
+    \newblock IEEE (Institute of Electrical and Electronics Engineers).
+    \end{thebibliography}
+\end{frame}
+
+\section{Concepto de Metodología Ágil}
+
+\subsection{Metodologías Ágiles y Metodologías No Ágiles}
+
+\begin{frame}[c]
+    \frametitle{Metodologías Fuertemente Planificadas vs Ágiles}
+    \begin{block}{Metodologías Fuertemente Planificadas}
+        Se basan en la definición de un plan de trabajo al cual debemos de adherirnos y que es complejo o difícil de cambiar. Suele tener roles y procesos claramente
+        definidos.
+    \end{block}
+    \uncover<2->{
+    \begin{block}{Metodologías Ágiles}
+        Se basan en una organización del trabajo que \uncover<3->{permita la definición de planes de trabajo, procesos y productos fácilmente modificables en función de las demandas de los usuarios,} \uncover<4->{con los cuales se debe mantener un permanente contacto,} \uncover<5->{y al cual se le deben proporcionar versiones parciales y operativas del software con frecuencia.}
+    \end{block}
+    }
+\end{frame}
+
+\subsection{Manifiesto Ágil}
+
+\begin{frame}[c]
+	\frametitle{Manifiesto Ágil}
+	\begin{enumerate}[<+->]
+		\item Personas e interacciones personales sobre procesos y herramientas.
+		\item Software operativo antes que extensos modelos software.
+		\item Colaboración con el cliente frente a renegociaciones de contrato.
+		\item Ser capaz de responder al cambio antes que seguir un plan fijo.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}[c]
+	\frametitle{Principios del Manifiesto Ágil (1-6)}
+	\begin{enumerate}[<+->]
+		\item Satisfacción del cliente mediante entregas tempranas y continuas de software operativo.
+		\item Los cambios son siempre bien recibidos.
+		\item Entregar software operativo frecuentemente.
+		\item Gestores y programadores deben trabajar juntos siempre.
+		\item Motivar y confiar en los trabajadores.
+		\item La mejor forma de transmitir información es cara a cara.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}[c]
+	\frametitle{Principios del Manifiesto Ágil (7-12)}
+	\begin{enumerate}[<+->]
+		\item El principal indicador del avance de un proyecto es la cantidad de software operativo entregado.
+		\item El desarrollo software debería ser sostenible.
+		\item La excelencia técnica y los buenos diseños facilitan la agilidad.
+		\item La simplicidad (el arte de maximizar el trabajo a no hacer) es primordial.
+        \item Las mejores arquitecturas y diseños emergen de equipos autoorganizados.
+        \item El equipo de trabajo debe reflexionar periódicamente acerca de su eficiencia y productividad.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}[t]
+	\frametitle{Principales Tipos de Metodologías Ágiles}
+    \begin{flushright}
+        {\scriptsize Fuente: 8th Annual State of Agile}
+    \end{flushright}
+    \ \\ \ \\ \ \\
+	\begin{enumerate}[<+->]
+        \item Scrum
+		\item eXtremme Programming (XP)
+        \item Kanban
+        \item Lean
+        \item Feature-Driven Development (FDD)
+	\end{enumerate}
+\end{frame}
+
+\subsection{Limitaciones de las Metodologías Ágiles}
+
+\begin{frame}[c]
+	\frametitle{Limitaciones de las Metodologías Ágiles}
+	\begin{enumerate}[<+->]
+		\item Necesidad de involucrar al cliente.
+        \item Necesidad de tener una actitud y una personalidad cooperativa.
+        \item Necesidad de tener unas ciertas habilidades técnicas.
+        \item Dificultades para identificar prioridades e incrementos sw.
+        \item Mantener la simplicidad frente al simple parcheo.
+        \item Problemas contractuales y de definición de ámbito del proyecto.
+	\end{enumerate}
+\end{frame}
+
+\section{Lean}
+
+\begin{frame}[c]
+	\frametitle{Desarrollo de Software \alert{Lean}}
+    \begin{block}{Metodología Lean}
+        Metodología articulada en torno a una serie de técnicas y métodos que cumplen con los siguientes principios:
+    	\begin{enumerate}[<+->]
+		    \item Eliminar los desperdicios.
+            %% Eliminar todo aquello que no es útil para el usuario
+            \item Fomentar el aprendizaje.
+            %% Explorar ideas hasta dar con la solución adecuada
+            \item Postergar las decisiones tanto como se pueda.
+            \item Realizar entregas tan rápido como sea posible.
+            \item Delegar responsabilidades en el equipo de trabajo.
+            \item Fomentar la integridad del producto y del equipo.
+            \item Facilitar la visión global del conjunto.
+	   \end{enumerate}
+    \end{block}
+\end{frame}
+
+\section{Técnicas y Herramientas Ágiles}
+
+\subsection{Historias de Usuario}
+
+\begin{frame}[c]
+	\frametitle{Historia de Usuario (\emph{User Story})}
+	\begin{block}{Historia de Usuario}
+        Un \emph{historia de usuario} describe una funcionalidad del sistema que posee valor para algún \emph{stakeholder} del sistema.
+        \uncover<2->{Una historia de usuario se compone de tres elementos:
+        \begin{description}
+            \item<3->[Conversación] Corresponde con las conversaciones (efímeras) mantenidas entre las diferentes personas involucradas en el desarrollo de la historia de usuario, tales como usuarios, clientes, testadores, programadores, etc. Se puede documentar parte de estas conversaciones.
+            \item<4->[Tarjeta] Cada historia de usuario se anota en una tarjeta física, que representa la historia de usuario.
+            \item<5->[Confirmación] Procedimiento para verificar que la historia de usuario ha sido realizada.
+        \end{description}
+        }
+	\end{block}
+\end{frame}
+
+\begin{frame}[c]
+	\frametitle{Propiedades Deseables de una Historia de Usuario}
+	\begin{enumerate}[<+->]
+		\item Independiente.
+        \item Negociable.
+        \item Añade valor al producto.
+        \item Estimable.
+        \item Pequeñas.
+        \item Verificable (testable).
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}[c]
+	\frametitle{Historia Épica}
+	\begin{block}{Historia Épica}
+        Una historia épica (\emph{epic}) es una historia que por su tamaño no puede ser desarrollada en un periodo corto de tiempo, por lo que ha de ser descompuesta en historias de usuario de menor tamaño.
+	\end{block}
+\end{frame}
+
+\subsection{Sprint y Spike}
+
+\begin{frame}[c]
+    \frametitle{Sprint and Spike}
+    \begin{block}{Sprint}
+        Un \emph{sprint} es una iteración de una duración concreta de tiempo, normalmente corta, y al final de la cual se produce software potencialmente entregable.
+    \end{block}
+    \uncover<2->{
+    \begin{block}{Spike}
+        Un \emph{spike} es una iteración en la cual no se libera nuevo código que pueda ser instalado o probado por los usuarios de la aplicación. Un \emph{spike} se utiliza para probar nuevos algoritmos, aprender nuevas tecnologías, generar documentación o productos de marketing, entre otros elementos.
+    \end{block}
+    }
+\end{frame}
+
+\subsection{Desarrollo Basado en Pruebas}
+
+\begin{frame}[c]
+    \frametitle{Desarrollo Dirigido por Pruebas}
+    \begin{enumerate}[<+->]
+        \item Los casos de prueba se escriben antes que el código.
+        \item Los casos de prueba se automatizan.
+        \item El código se escribe buscando satisfacer las pruebas.
+        \item Una nueva funcionalidad se considera completada cuando supera todos los casos de prueba.
+    \end{enumerate}
+\end{frame}
+
+\subsection{Juego de la Planificación}
+
+\begin{frame}[c]
+    \frametitle{Precisión y Esfuerzo en las Estimaciones}
+    \begin{center}
+        \includegraphics[width=9cm,keepaspectratio=true]{images/agiles/estimationEffort.eps}
+    \end{center}
+\end{frame}
+
+\begin{frame}[c]
+    \frametitle{Principios Estimación Ágil}
+    \begin{enumerate}[<+->]
+        \item Las estimaciones son compartidas y consensuadas.
+        %% No se sabe quién va a hacer la taresa
+        %% Es mejor varias opiones que una
+        \item Utilizar una escala discreta para las estimaciones (Fibonacci).
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}[c]
+    \frametitle{Planning Poker}
+    \begin{enumerate}[<+->]
+        \item Se reune al equipo de desarrollo.
+        \item Cada miembro recibe una serie de cartas con los valores de la escala de estimación.
+        \item Por cada elemento a estimar, el moderador presenta el elemento a estimar.
+        \item Si es necesario, los diferentes miembros piden que se realicen aclaraciones sobre dicho elemento.
+        \item A continuacíón, cada miembro escoge una carta con el valor de su estimación, ocultando su valor.
+        \item Cuando todos los miembros han realizado su estimación, se muestran las cartas.
+        \item Si hay variaciones significativas en la estimación, se discute brevemente los valores dados, y se vuelve al punto 5.
+        \item Si no hay diferencias significativas, se selecciona el valor de la estimación consensuada.
+    \end{enumerate}
+\end{frame}
+
+\subsection{Programación por Pares}
+
+\begin{frame}[c]
+    \frametitle{Programación por Pares}
+    \begin{block}{Programación por Pares}
+        Se codifica por parejas, donde una persona escribe el código y la otra persona supervisa y aporta ideas. Los roles se permutan con frecuencia.
+    \end{block}
+    \begin{enumerate}
+        \item<2-> Se reduce el número de defectos.
+        \item<3-> Se genera código más compacto.
+        \item<4-> Se detectan más refactorizaciones.
+        \item<5-> El par que observa actúa de revisor del código (aumenta la calidad).
+        \item<6-> Se evita que una pieza de código sólo pertenezca a una persona.
+    \end{enumerate}
+\end{frame}
+
+\section{Scrum}
+
+\subsection{Roles en Scrum}
+
+\begin{frame}[c]
+    \frametitle{Roles en Scrum}
+    \begin{enumerate}[<+->]
+        \item Product Owner.
+        \item Scrum Team.
+        \item Scrum Master.
+    \end{enumerate}
+\end{frame}
+
+\subsection{Esquema de Scrum}
+
+\begin{frame}
+	\frametitle{Proceso de Desarrollo Scrum}
+%    \only<1>{
+%    \rput[lt](0,0){
+%        \includegraphics[width=11cm,keepaspectratio=true]{images/scrum/scrum00.eps}}}
+%    \only<2>{
+%    \rput[lt](0,0){
+%        \includegraphics[width=11cm,keepaspectratio=true]{images/scrum/scrum01.eps}}}
+%    \only<3>{
+%    \rput[lt](0,0){
+%        \includegraphics[width=11cm,keepaspectratio=true]{images/scrum/scrum02.eps}}}
+%    \only<4>{
+%    \rput[lt](0,0){
+%        \includegraphics[width=11cm,keepaspectratio=true]{images/scrum/scrum03.eps}}}
+%    \only<5>{
+%    \rput[lt](0,0){
+%        \includegraphics[width=11cm,keepaspectratio=true]{images/scrum/scrum04.eps}}}
+%    \only<6>{
+%    \rput[lt](0,0){
+%        \includegraphics[width=11cm,keepaspectratio=true]{images/scrum/scrum05.eps}}}
+%    \only<7>{
+%    \rput[lt](0,0){
+%        \includegraphics[width=11cm,keepaspectratio=true]{images/scrum/scrum06.eps}}}
+%    \only<8>{
+%    \rput[lt](0,0){
+%        \includegraphics[width=11cm,keepaspectratio=true]{images/scrum/scrum07.eps}}}
+    \only<9>{
+    \rput[lt](0,0){
+        \includegraphics[width=11cm,keepaspectratio=true]{images/scrum/scrum08.eps}}}
+\end{frame}
+
+%%==================================================================================%%
+%% Notas sobre Scrum                                                                %%
+%% -------------------------------------------------------------------------------- %%
+%%  (1) Los sprints son de duración fija, no se alargan nunca                       %%
+%%  (2) Sólo hay un Product Owner                                                   %%
+%%  (3) El Scrum Team es multidisciplinar y autoorganizado                          %%
+%%  (4) Product Backlog contiene historias de usuario, peticiones de mantenimiento  %%
+%%      acciones exploratorias y técnicas                                           %%
+%%  (5) La estimación se hace en puntos inicialmente, aunque luego las tareas se    %%
+%%      descomponen en horas                                                        %%
+%%  (6) Las reuniones de planificación tienen una duración fija                     %%
+%%  (7) No se pueden añadir modificaciones durante los sprints                      %%
+%%  (8) Esquema de un scrum daily meeeting: (a) qué he hecho; (b) qué voy a hacer;  %%
+%%      (c) qué dificultades he encontrado.                                         %%
+%%  (9) Sprint Review = demo + conversation                                         %%
+%%  (10) Sprint Review sin transparencias, preparación inferior a dos horas         %%
+%%==================================================================================%%
+
+\subsection{Conceptos y Técnicas de Scrum}
+
+\begin{frame}[c]
+    \frametitle{Conceptos de Scrum}
+    \begin{enumerate}[<+->]
+        \item Release backlog.
+        \item Velocidad del equipo.
+        \item Definición de Completado.
+        \item Sprint and Release Burndown Charts.
+        \item Product Backlog Refinement.
+    \end{enumerate}
+\end{frame}
+
+\section{Extreme Programming (XP)}
+
+\subsection{Ciclo de Vida XP}
+
+\begin{frame}[c]
+	\frametitle{Ciclo de de Vida XP}
+    \begin{center}
+        \includegraphics[width=\linewidth]{images/agiles/xpOverview.eps}
+    \end{center}
+\end{frame}
+
+\subsection{Principios XP}
+
+\begin{frame}[c]
+	\frametitle{Las Doce Prácticas de XP}
+    \begin{enumerate}[<+->]
+        \item Versiones pequeñas.
+        \item El juego de la planificación.
+        \item Refactorización.
+        \item Desarrollo dirigido por pruebas.
+        \item Desarrollo por pares.
+        \item Ritmo de trabajo sostenible.
+        \item Propiedad colectiva del código.
+        \item Estándares para la codificación.
+        \item Diseños simples (no puntos de variación anticipados).
+        \item Utilización de metáforas.
+        \item Integración continua.
+        \item Inclusión del cliente en el equipo de desarrollo.
+    \end{enumerate}
+\end{frame}
+
+\section{Kanban}
+
+\subsection{Introducción}
+
+\begin{frame}[c]
+    \frametitle{Kanban}
+    \begin{enumerate}[<+->]
+        \item El objetivo encontrar un ritmo de trabajo sostenible y óptimo.
+        %% Large scale software development is a marathon, not a sprint
+        %% Problema de decir no al jefe
+        %% Problema de no acabar con los trabajadores
+        \item Aplica \emph{Teoría de las Restricciones}.
+        \item Busca identificar y eliminar cuellos de botella de los procesos de trabajo.
+        \item Para poder identificar cuellos de botellas, debemos visualizar el proceso.
+    \end{enumerate}
+\end{frame}
+
+\subsection{Idea General de Kanban}
+
+\begin{frame}[c]
+	\frametitle{Filosofía de Kanban}
+    \begin{center}
+        \includegraphics[width=0.85\linewidth]{images/kanban/imperialPalace.jpg}
+    \end{center}
+\end{frame}
+
+\begin{frame}[c]
+    \frametitle{Filosofía Kanban}
+    \begin{enumerate}[<+->]
+        \item El equipo de trabajo tiene unos recursos.
+        \item Cada recurso tiene una capacidad de producción determinada.
+        \item Cuando un recurso tiene capacidad libre, libera tarjetas que señalan que puede admitir más trabajo.
+        \item Cuando un recurso no tiene capacidad libre, no habría tarjetas disponibles para solicitar más trabajo.
+    \end{enumerate}
+\end{frame}
+
+\subsection{Kanban en Desarrollo Software}
+
+\begin{frame}[c]
+    \frametitle{Método Kanban}
+    \begin{enumerate}[<+->]
+        \item Las tareas a realizar se escriben en tarjetas.
+        \item Cada miembro del equipo es un recurso que puede admitir un determinado número de tarjetas simultáneas.
+        \item Por tanto, \alert{la cantidad de trabajo que puede estar en progreso es limitada}.
+        \item Cuando un recurso puede admitir más trabajo, debe señalarse para que se le asigne.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}[c]
+	\frametitle{Método Kanban}
+    \begin{center}
+        \includegraphics[width=0.85\linewidth]{images/kanban/kanbanBoard00.jpg}
+    \end{center}
+\end{frame}
+
+\begin{frame}[c]
+	\frametitle{Método Kanban}
+    \begin{center}
+        \includegraphics[width=0.80\linewidth]{images/kanban/kanbanBoard01.jpg}
+    \end{center}
+\end{frame}
+
+\begin{frame}[c]
+	\frametitle{Propiedades Fundamentales de un Método Kanban}
+    \begin{enumerate}[<+->]
+        \item Limitar la capacidad del \emph{work in progress}.
+        \item Visualizar el proceso y el flujo de trabajo.
+        \item Medir y optimizar el flujo de trabajo.
+        \item Hacer explícitas y visibles las reglas del proceso de trabajo.
+        \item Gestionar el proceso con métricas.
+    \end{enumerate}
+\end{frame}
+
+%% Search for sustainable pace
+%% Aplicar Teoría de las Restricciones (Goldratt)
+%% Identificar cuellos de botella
+%% Idea Inicial basada en Dream-Buffer-Rope, later renamed to Kanban
+
+%% El número de tarjetas debe coincidir con la capacidad del equipo
+%% "This mechanism is known as a pull system because new work is pulled into
+%%  the system when there is capacity to handle it, rather than being pushed
+%%  into the system based on demand."
+
+%% "However, if there is no explicit limit to work-inprogress and no
+%% signaling to pull new work through the system then it is not a
+%% kanban system."
+
+\section{Sumario}
+
+\begin{frame}[c]
+    \frametitle{¿Qué Tengo que Saber de Todo Esto?}
+    \begin{enumerate}[<+->]
+        \item Saber cuáles son y comprender los principios del manifiesto ágil.
+        \item Saber cuáles son y comprender los principios de las metodologías \emph{Lean}.
+        \item Saber discernir cuando una metodología cumple con los principios del manifiesto ágil o de la filosofía Lean.
+        \item Saber especificar requisitos funcionales como historias de usuario.
+        \item Conocer la terminología y las técnicas asociadas a la metodología de desarrollo \alert{Scrum}.
+        \item Ser capaz de trabajar como miembro de un \emph{Scrum Team}.
+        \item Ser capaz de utilizar una herramienta de gestión de proyectos Scrum como \alert{Scrum Desk}.
+        \item Comprender los principios y organización de la metodología de desarrollo XP.
+        \item Comprender los principios y objetivos de la metodología de desarrollo Kanban.
+    \end{enumerate}
+\end{frame}
+
+%\subsection{Referencias}
+%
+%\begin{frame}
+%	\frametitle{Referencias}
+%    \nocite{Anderson2010}
+%	\bibliographystyle{apalike}
+%    \bibliography{metodos}
+%\end{frame}
+
+\end{document}
