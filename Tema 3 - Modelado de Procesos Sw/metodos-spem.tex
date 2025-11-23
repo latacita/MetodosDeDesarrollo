@@ -1,5 +1,5 @@
 % !TeX encoding = UTF-8
-\documentclass[handout,a4paper,t]{beamer}
+\documentclass[a4paper,t]{beamer}
 
 \input{slidesHeader.tex}
 
@@ -150,101 +150,116 @@
 %    \end{enumerate}
 %\end{frame}
 
-\subsection{Fases Habituales de un Ciclo de Vida Sw}
-
-\begin{frame}[c]
-    \frametitle{Fases Típicas de un Proceso de Desarrollo Sw}
-    \begin{center}
-        \includegraphics[width=0.75\textwidth,keepaspectratio=true]{images/intro/cicloVidaSw.eps}
-    \end{center}
-\end{frame}
+%\subsection{Fases Habituales de un Ciclo de Vida Sw}
+%
+%\begin{frame}[c]
+%    \frametitle{Fases Típicas de un Proceso de Desarrollo Sw}
+%    \begin{center}
+%        \includegraphics[width=0.75\textwidth,keepaspectratio=true]{images/intro/cicloVidaSw.eps}
+%    \end{center}
+%\end{frame}
 
 \section{Tipos Básicos de Metodologías Sw}
+%
+%\subsection{Metodologías Ágiles y Pesadas}
+%
+%\begin{frame}[c]
+%    \frametitle{Índice}
+%    \begin{enumerate}
+%         \item Concepto y Necesidad de los Procesos de Desarrollo Sw
+%         \item \alert{Tipos Básicos de Metodologías Sw}
+%         \begin{enumerate}
+%             \item \alert<2->{Metodologías Ágiles y Pesadas}
+%             \item Ejemplos de Metodologías
+%        \end{enumerate}
+%        \item Modelado de Procesos de Desarrollo con SPEM 2.0
+%        \item Sumario y Referencias
+%    \end{enumerate}
+%\end{frame}
+%
+%\begin{frame}[c]
+%    \frametitle{Metodologías Pesadas y Ágiles}
+%    \begin{block}{Metodologías Pesadas o Rígidamente Planificadas}
+%        Se basan en la definición de un plan de trabajo al cual debemos de adherirnos
+%        y que es complejo o difícil de cambiar. Suele tener roles y procesos claramente
+%        definidos.
+%    \end{block}
+%    \uncover<2->{
+%    \begin{block}{Metodologías Ágiles}
+%        Se basan en una organización del trabajo que permita la definición de planes de trabajo, procesos y productos fácilmente modificables en función de las demandas de los usuarios, con los cuales se debe mantener un permanente contacto, y al cual se le deben proporcionar versiones parciales y operativas del software con frecuencia.
+%    \end{block}
+%    }
+%\end{frame}
+%
+%\begin{frame}[c]
+%	\frametitle{Manifiesto Ágil}
+%	\begin{enumerate}[<+->]
+%		\item Personas y trato personal sobre procesos y herramientas.
+%		\item Software que funcione antes que extensos modelos software.
+%		\item Colaboración con el cliente frente a renegociaciones de contrato.
+%		\item Ser capaz de responder al cambio antes que seguir un plan fijo.
+%	\end{enumerate}
+%\end{frame}
+%
+%\begin{frame}[t]
+%	\frametitle{Principios del Manifiesto Ágil}
+%	\begin{enumerate}[<+->]
+%		\item Satisfacción del cliente mediante entregas tempranas y continuas de software evaluable.
+%		\item Los cambios son siempre bien recibidos.
+%		\item Entregar software operativo frecuentemente.
+%		\item Gestores y programadores deben trabajar juntos a diario.
+%		\item Para construir software hacen falta trabajadores motivados.
+%		\item La mejor forma de proporcionar información es cara a cara.
+%		\item El principal indicador del avance de un proyecto es la cantidad de software operativo que se ha construido.
+%		\item El desarrollo software debería ser abordable.
+%		\item La excelencia técnica y los buenos diseños facilitan la agilidad.
+%		\item La simplicidad es primordial.
+%	\end{enumerate}
+%\end{frame}
 
-\subsection{Metodologías Ágiles y Pesadas}
+\subsection{Desarrollo en Cascada}
 
 \begin{frame}[c]
-    \frametitle{Índice}
-    \begin{enumerate}
-         \item Concepto y Necesidad de los Procesos de Desarrollo Sw
-         \item \alert{Tipos Básicos de Metodologías Sw}
-         \begin{enumerate}
-             \item \alert<2->{Metodologías Ágiles y Pesadas}
-             \item Ejemplos de Metodologías
-        \end{enumerate}
-        \item Modelado de Procesos de Desarrollo con SPEM 2.0
-        \item Sumario y Referencias
-    \end{enumerate}
-\end{frame}
-
-\begin{frame}[c]
-    \frametitle{Metodologías Pesadas y Ágiles}
-    \begin{block}{Metodologías Pesadas o Rígidamente Planificadas}
-        Se basan en la definición de un plan de trabajo al cual debemos de adherirnos
-        y que es complejo o difícil de cambiar. Suele tener roles y procesos claramente
-        definidos.
-    \end{block}
-    \uncover<2->{
-    \begin{block}{Metodologías Ágiles}
-        Se basan en una organización del trabajo que permita la definición de planes de trabajo, procesos y productos fácilmente modificables en función de las demandas de los usuarios, con los cuales se debe mantener un permanente contacto, y al cual se le deben proporcionar versiones parciales y operativas del software con frecuencia.
-    \end{block}
-    }
-\end{frame}
-
-\begin{frame}[c]
-	\frametitle{Manifiesto Ágil}
-	\begin{enumerate}[<+->]
-		\item Personas y trato personal sobre procesos y herramientas.
-		\item Software que funcione antes que extensos modelos software.
-		\item Colaboración con el cliente frente a renegociaciones de contrato.
-		\item Ser capaz de responder al cambio antes que seguir un plan fijo.
-	\end{enumerate}
-\end{frame}
-
-\begin{frame}[t]
-	\frametitle{Principios del Manifiesto Ágil}
-	\begin{enumerate}[<+->]
-		\item Satisfacción del cliente mediante entregas tempranas y continuas de software evaluable.
-		\item Los cambios son siempre bien recibidos.
-		\item Entregar software operativo frecuentemente.
-		\item Gestores y programadores deben trabajar juntos a diario.
-		\item Para construir software hacen falta trabajadores motivados.
-		\item La mejor forma de proporcionar información es cara a cara.
-		\item El principal indicador del avance de un proyecto es la cantidad de software operativo que se ha construido.
-		\item El desarrollo software debería ser abordable.
-		\item La excelencia técnica y los buenos diseños facilitan la agilidad.
-		\item La simplicidad es primordial.
-	\end{enumerate}
-\end{frame}
-
-\subsection{Ejemplos de Metodologías}
-
-\begin{frame}[t]
     \frametitle{Desarrollo en Cascada}
-	\rput[lt](2.5,0){
-	   \includegraphics[width=7cm,keepaspectratio=true]{images/modelos/cascada.eps}
-	}
+	%% \rput[lt](2.5,0){
+	   \centering \includegraphics[width=7cm,keepaspectratio=true]{images/modelos/cascada.eps}
+	%% }
 \end{frame}
 
-\begin{frame}[t]
+\subsection{Desarrollo Iterativo o Incremental}
+
+\begin{frame}[c]
     \frametitle{Desarrollo Iterativo o Incremental}
-	\rput[lt](1,0){
-	   \includegraphics[width=10cm,keepaspectratio=true]{images/modelos/espiral.eps}
-	}
+	%% \rput[lt](1,0){
+	   \centering \includegraphics[width=10cm,keepaspectratio=true]{images/modelos/espiral.eps}
+	%% }
 \end{frame}
 
-\begin{frame}[t]
+\subsection{Desarrollo Basado en Reutilización}
+
+\begin{frame}[c]
     \frametitle{Desarrollo Basado en Reutilización}
-	\rput[lt](1,0){
-	   \includegraphics[width=10cm,keepaspectratio=true]{images/modelos/componentes.eps}
-	}
+	%% \rput[lt](1,0){
+	   \centering \includegraphics[width=10cm,keepaspectratio=true]{images/modelos/componentes.eps}
+	%% }
 \end{frame}
 
-\begin{frame}[t]
+\subsection{Métodos Formales}
+
+\begin{frame}[c]
     \frametitle{Métodos Formales}
-	\rput[lt](1,0){
-	   \includegraphics[width=10cm,keepaspectratio=true]{images/modelos/sintesis.eps}
-	}
+	%% \rput[lt](1,0){
+	   \centering  \includegraphics[width=10cm,keepaspectratio=true]{images/modelos/sintesis.eps}
+	%% }
+\end{frame}
+
+\subsection{Líneas de Productos Software}
+
+\begin{frame}[c]
+	\frametitle{Líneas de Productos Software}
+	%% \rput[lt](1,0){
+	\centering \includegraphics[width=10cm,keepaspectratio=true]{images/modelos/splProcess.eps}
+	%% }
 \end{frame}
 
 \section{Modelado de Procesos de Desarrollo con SPEM 2.0}
@@ -278,10 +293,10 @@
 \begin{frame}[c]
     \frametitle{Características SPEM 2.0}
     \begin{enumerate}[<+->]
-        \item Separación de la definición y aplicación de los contenidos de un proceso de desarrollo.
+        \item Separación de la definición y aplicación de los contenidos .
         \item Gestión consistente de variaciones de procesos de desarrollo.
         \item Soporte para múltiples ciclos de vida.
-        \item Soporte para la especificación y personalización de elementos variables.
+        \item Especificación y personalización de elementos variables.
         \item Definición de patrones de procesos para la definición de procesos de desarrollo por instanciación y ensamblado de patrones.
         \item Soporte para la definición de elementos de un proceso de desarrollo como componentes de caja negra.
     \end{enumerate}
@@ -297,7 +312,7 @@
         \item[Task Definition] Describe una unidad de trabajo que deberá ser realizada por uno o más roles.
         % Granularidad: varias horas o días
         \item[Step] Especifica una acción (normalmente indivisible y consistente) del trabajo que debe ser realizado para completar una tarea.
-        \item[Tool Definition] Especifica las capacidades que debe poseer una herramienta para dar soporte a ciertas definiciones de roles en la realización de ciertas definiciones de tareas.
+        \item[Tool Definition] Especifica las capacidades que debe poseer una herramienta para dar soporte a ciertos roles en la realización de ciertas tareas.
         \item[Work Product Definition] Elementos tangibles que son producidos, consumidos o modificados por las tareas.
         \item[Guidance] Elementos que proporciona información complementaria a otros elementos.
     \end{description}
@@ -330,6 +345,7 @@
         \item[Checklist] Conjunto de items que necesitan ser completados o verificados.
         \item[Concept] Pequeño manual o tutorial que describe un concepto relacionado con uno o más elementos de un proceso de desarrollo.
         \item[Estimate] Proporciona medidas, o procedimientos de medida, para estimar el esfuerzo asociado a una cierta tarea, así como instrucciones para su interpretación.
+        %% Una estimación puede combinar varias métricas y varias consideraciones. 
         \item[Estimating Metric] Métrica utilizada para medir esfuerzos asociados a un elemento.
         \item[Estimation Considerations] Indicaciones acerca de cómo aplicar métricas dentro de un proyecto concreto.
         \item[Example] Ejemplo de un producto o tarea.
@@ -352,10 +368,9 @@
     \begin{description}[<+->]
         \item[Template] Proporciona un documento plantilla para la elaboración de elementos de trabajo.
         \item[Term Definition] Define conceptos que se integran en el glosario.
-+
         \item[Tool Mentor] Tutorial acerca de cómo utilizar una determinada herramienta para ejecutar un determinado trabajo.
         \item[Whitepaper] Son descripciones de conceptos que han sido revisados por entidades externas.
-        \item[Supporting Material] Categoría donde se clasifican todos los elementos de asistencia que no encajan en ninguna de las categorías anteriores.
+        \item[Supporting Material] Elementos de asistencia que no encajan en ninguna de las categorías anteriores.
     \end{description}
 \end{frame}
 
@@ -373,9 +388,9 @@
     \frametitle{Procesos Predefinidos en SPEM 2.0}
     \begin{description}[<+->]
         \item[Delivery Process] Describe un proceso sw completo que termina con la entrega de un sistema.
-        \item[Phase] Representa un periodo de importancia dentro de un proyecto, cuya finalización genera productos o actividades relevantes.
+        \item[Phase] Representa un periodo destacado dentro de un proyecto, cuya finalización genera productos o actividades relevantes.
         \item[Iteration] Conjunto de actividades que se repiten más de una vez.
-        \item[Capability Pattern] Conjuntos reutilizables de actividades que se utilizan para crear procesos.
+        \item[Process Pattern] Conjuntos reutilizables de actividades que se utilizan para crear procesos.
         \item[Process Planning Template] Proceso que está preparado para su integración con una herramienta de gestión de proyectos.
     \end{description}
 \end{frame}
@@ -410,9 +425,13 @@
     \frametitle{Propiedades de los Elementos de un Proceso en SPEM 2.0}
     \begin{description}[<+->]
         \item[hasMultipleOcurrences] El elemento puede aparecer varias veces en una WBS final.
+        %% Ejemplo: Especificar criterios de confirmación. 
         \item[isRepeteable] El elemento puede aparecer varias veces en una WBS final; y sus ejecuciones son secuenciales.
+        %% Ejemplo: Sprint Planning Meeting I
         \item[isOptional] La inclusión del WBS cuando se instancia el proceso es opcional.
+        %% Ejemplo: Realización de los daiñly scrum meeting. 
         \item[isOngoing] Representa tareas rutinarias y repetitivas.
+        %% Ejemplo: Elaborar plan de mejora. 
         \item[isEventDriven] Su comienzo está asociado a la ocurrencia de un cierto evento.
     \end{description}
 \end{frame}
